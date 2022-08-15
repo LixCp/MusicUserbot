@@ -111,7 +111,7 @@ async def play(client, m: Message):
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("**✧ Memproses Request..**")
+            huehue = await replied.reply("**✧ در حال پردازش درخواست شما..**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -128,10 +128,10 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                     caption=f"""
-**▶ Lagu Di Antrian Ke {pos}
-🏷 Judul: [{songname}]({link})
-💡 Status: Playing
-🎧 Permintaan: {m.from_user.mention}**
+**▶ پخش {pos}
+🏷 نام: [{songname}]({link})
+💡 وضعیت: درحال پخش
+🎧 درخواست کننده: {m.from_user.mention}**
 """,
                 )
             else:
@@ -148,10 +148,10 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/613f681a511feb6d1b186.jpg",
                     caption=f"""
-**▶ Mulai Memutar Lagu
-🏷 Judul: [{songname}]({link})
-💡 Status: Playing
-🎧 Atas Permintaan: {m.from_user.mention}**
+**▶ پخش
+🏷 نام: [{songname}]({link})
+💡 وضعیت: درحال پخش
+🎧 درخواست کننده: {m.from_user.mention}**
 """,
                 )
 
